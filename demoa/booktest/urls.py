@@ -7,8 +7,8 @@ from . import views
 
 urlpatterns = [
     # 子级请求要求：r
-    #                 ^
-    #                     $
+    #                 ^以...开头
+    #                     $以...结尾
     url(r'idx/$', views.index),
     url(r'l/$', views.showlist),
     # 请求传参：/后使用正则表示参数格式如整数:\d

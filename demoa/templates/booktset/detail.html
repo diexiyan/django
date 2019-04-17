@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+</head>
+<body>
+    {% for h in heroset %}
+        <p>人物：<a href="#">{{h.hname}}</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            性别：{{h.hsex}}
+        </p>
+
+    {% empty %}
+        <p>没有图书信息</p>
+    {% endfor %}
+<p><a href="/booktest/l">返回列表页</a></p>
+</body>
+</html>
