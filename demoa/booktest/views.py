@@ -26,6 +26,7 @@ def index(request):
 
 def showlist(request):
     # return HttpResponse("展示列表")
+    return 'kl'
     booklist = BookInfo.objects.all()
     return render(request, 'booktset/list.html', {'booklist': booklist})
 
