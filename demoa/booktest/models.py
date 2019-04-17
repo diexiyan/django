@@ -9,13 +9,19 @@ class BookInfo(models.Model):
     def __str__(self):
         return self.bname
 
+    def disname(self):
+        return self.bname
+    disname.short_description = '书名'
+
+    def destime(self):
+        return self.bpub_time
+    destime.short_description = '发布时间'
+
+
 class Hero(models.Model):
     hname = models.CharField(max_length=20)
-    bsex = models.BooleanField()
-    bfrom_bid = models.ForeignKey('BookInfo', on_delete=models.CASCADE)
+    hsex = models.BooleanField()
+    bid = models.ForeignKey('BookInfo', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.hname
-
-
-
