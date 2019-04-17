@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    {% if user %}
+        <p>你好：{{user}}</p>
+    {% else %}
+        <p>没有登录</p>
+    {% endif %}
+
+</body>
+</html>
