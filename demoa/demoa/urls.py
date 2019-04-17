@@ -20,6 +20,6 @@ from django.conf.urls import include, url
 urlpatterns = [
     # 第一级目录，配置。一般很少使用
     path('admin/', admin.site.urls),
-    url(r'', include('booktest.urls', namespace='booktest')),
+    url(r'booktest/', include('booktest.urls', namespace='booktest')),
 
 ]
