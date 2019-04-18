@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    {% if user %}
+        <p>你好，{{user}}</p>
+    <a href="{% url 'item:showpoet' %}">查看诗人列表</a>
+    {% else %}
+        <p>没有登录</p>
+    {% endif %}
+
+</body>
+</html>

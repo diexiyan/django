@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看得分</title>
+</head>
+<body>
+    <p>{{ ques.qcon }}</p>
+    {% for c in chall %}
+        {{ c.ct}}: {{c.cval}}&nbsp;&nbsp;&nbsp;&nbsp;
+    {% empty %}
+    {% endfor %}
+    <a href="{% url 'vote:detail' ques.id %}">返回列表页</a>
+</body>
+</html>

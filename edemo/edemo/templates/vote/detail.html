@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+</head>
+<body>
+    <form action="{% url 'vote:ckfs' %}" method="post">
+        <p>{{ ques.qcon }}</p>
+        <input type="hidden" name="ques" value="{{ques.id}}">
+        {% for c in chall %}
+            <input type="radio" name="choice" value="{{c.id}}">{{ c.ct}}&nbsp;&nbsp;&nbsp;&nbsp;
+        {% empty %}
+        {% endfor %}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="提交">
+        <a href="{% url 'vote:index' %}">返回首页</a>
+
+    </form>
+
+</body>
+</html>

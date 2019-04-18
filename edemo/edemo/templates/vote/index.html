@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    {% for q in ls%}
+        <li><a href="{% url 'vote:detail' q.id %}">{{q.qcon}}</a></li>
+    {% endfor %}
+</body>
+</html>
